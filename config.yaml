@@ -4,3 +4,7 @@ CompileFlags:                     # Tweak the parse settings
 Diagnostics:
   ClangTidy:
     Remove: bugprone-unchecked-optional-access 
+
+    CheckOptions:
+      cppcoreguidelines-avoid-do-while.IgnoreMacros: True
+
