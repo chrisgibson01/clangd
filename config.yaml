@@ -5,8 +5,9 @@ Diagnostics:
   UnusedIncludes: Strict
 
   ClangTidy:
-    Remove: bugprone-unchecked-optional-access,
-            bugprone-easily-swappable-parameters
+    Remove: [bugprone-unchecked-optional-access,
+             bugprone-easily-swappable-parameters,
+             cppcoreguidelines-pro-bounds-pointer-arithmetic]
 
     CheckOptions:
       cppcoreguidelines-avoid-do-while.IgnoreMacros: True
