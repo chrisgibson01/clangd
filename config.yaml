@@ -7,7 +7,9 @@ Diagnostics:
   ClangTidy:
     Remove: [bugprone-unchecked-optional-access,
              bugprone-easily-swappable-parameters,
-             cppcoreguidelines-pro-bounds-pointer-arithmetic]
+             cppcoreguidelines-pro-bounds-pointer-arithmetic,
+             cppcoreguidelines-avoid-do-while,
+             cppcoreguidelines-avoid-c-arrays]
 
     CheckOptions:
       cppcoreguidelines-avoid-do-while.IgnoreMacros: True
