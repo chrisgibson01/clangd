@@ -11,3 +11,22 @@ Diagnostics:
     CheckOptions:
       cppcoreguidelines-avoid-do-while.IgnoreMacros: True
 
+---
+# SV Node worktrees configuration
+# Provides fallback compilation flags for header files not in Unity-build compile_commands.json
+If:
+  PathMatch: /root/sv_worktrees/.*/.*
+
+CompileFlags:
+  Add:
+    - -DBOOST_AC_USE_STD_ATOMIC
+    - -DBOOST_SP_USE_STD_ATOMIC
+    - -DHAVE_CONFIG_H
+    - -std=gnu++20
+    - -isystem
+    - src
+    - -isystem
+    - src/univalue/include
+    - -isystem
+    - src/secp256k1/include
+
